@@ -1,0 +1,54 @@
+<mat-card class="example-card">
+    <div class="row" style="text-align: center;">
+
+        <div mat-card-avatar class="example-header-image"></div>
+        <div>
+            <mat-card-title>Register</mat-card-title>
+        </div>
+    </div>
+    <mat-card-content >
+
+        <form class="example-form">
+          
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>First name</mat-label>
+                <input matInput required>
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput>
+              </mat-form-field></td>
+            </tr></table>
+            <table class="example-full-width" cellspacing="0"><tr>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input matInput type="email" placeholder="Ex. abc@xyz.com" required>
+                </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                  <mat-label>Mobile</mat-label>
+                  <input matInput #moblieNo maxlength=10 placeholder="Ex. 9950878787" required>
+                  <mat-hint align="end">{{moblieNo.value.length}} / 10</mat-hint>
+                </mat-form-field></td>
+              </tr></table>
+            <p>
+              <mat-form-field class="example-full-width" style="display: flow-root;">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Ex. 100 Main St" required>
+              </mat-form-field>
+            </p>
+          
+            
+            <mat-form-field class="example-full-width">
+                <mat-label>Postal Code</mat-label>
+                <input matInput #postalCode maxlength="6" placeholder="Ex. 110011" value="" required>
+                <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+              </mat-form-field>
+          </form><br>
+              <div style="text-align: center;">
+              <button mat-button style="background-color: cadetblue;">REGISTER</button>
+            </div>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+</mat-card>

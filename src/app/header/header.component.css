@@ -1,0 +1,15 @@
+.bank-name{
+    text-align: center;
+    margin:auto;
+    background-color: coral;
+    padding-top: 13px;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.register{
+    text-align: center;
+    background-color: yellowgreen;
+    font-weight: 200;
+    padding-top: 13px;
+}

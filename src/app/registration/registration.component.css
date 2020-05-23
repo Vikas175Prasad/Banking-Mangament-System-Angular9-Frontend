@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 366px;
+    max-height: auto;
+    margin-left: 35%;
+    margin-top: 6%;
+    margin-bottom: 5%;
+  }
+  
+  .example-header-image {
+    background-image: url('https://hamiltonrykerit.com/wp-content/uploads/2015/07/blank-user-300x300.jpg');
+    background-size: cover;
+  }
+
+  .mat-card-avatar {
+    margin-left: 163px !important;
+    margin-bottom: 10px;
+  }
