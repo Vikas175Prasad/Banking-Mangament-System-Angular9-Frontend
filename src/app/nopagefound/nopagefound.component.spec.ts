@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { NopagefoundComponent } from './nopagefound.component';
 
@@ -6,7 +6,7 @@ describe('NopagefoundComponent', () => {
   let component: NopagefoundComponent;
   let fixture: ComponentFixture<NopagefoundComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ NopagefoundComponent ]
     })
