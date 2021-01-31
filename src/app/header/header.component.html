@@ -9,6 +9,12 @@
     <div fxFlex="20" class="register" *ngIf="showLogin">
         <span><a [routerLink]="['/login']">Login</a></span>
     </div>
+    <div fxFlex="10" class="register" *ngIf="showLogout">
+        <span>Welcome {{userDetails.firstName}}</span>
+    </div>
+    <div fxFlex="10" class="register" *ngIf="showLogout">
+        <span><a [routerLink]="['/login']">Logout</a></span>
+    </div>
 
 </div>
 </div>
