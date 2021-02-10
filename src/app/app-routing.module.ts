@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'accounts', component: AccountsComponent},
   { path: '**', component: NopagefoundComponent}
   
 ];

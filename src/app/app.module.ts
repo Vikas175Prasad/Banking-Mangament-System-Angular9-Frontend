@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 
 
@@ -32,7 +33,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     NopagefoundComponent,
     RegistrationComponent,
-    DashboardComponent
+    DashboardComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,

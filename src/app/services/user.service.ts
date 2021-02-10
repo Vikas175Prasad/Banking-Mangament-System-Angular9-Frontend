@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { from, Observable, of, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -51,5 +52,18 @@ export class UserService {
       return of(result as T);
     };
   }
+
+  itemValue = new Subject<User>();
+
+  set currentUser(user:any) {
+    this.itemValue.next(user);
+    localStorage.setItem('userDetails', JSON.stringify(user));
+  }
+
+  get currentUser(): any {
+    return JSON.parse(localStorage.getItem('userDetails'));
+  }
+
+  
 
 }

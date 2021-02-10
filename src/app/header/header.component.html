@@ -1,20 +1,20 @@
 <div class="container">
-<div class="flex-container" fxLayout="row" fxLayout.xs="column" style="height:20%;">
-    <div fxFlex="80" class="bank-name">
-        <p>Aapka Apna Bank</p>
-    </div>
-    <div fxFlex="20" class="register" *ngIf="showRegister">
-        <span><a [routerLink]="['/register']">Register Yourself</a></span>
-    </div>
-    <div fxFlex="20" class="register" *ngIf="showLogin">
-        <span><a [routerLink]="['/login']">Login</a></span>
-    </div>
-    <div fxFlex="10" class="register" *ngIf="showLogout">
-        <span>Welcome {{userDetails.firstName}}</span>
-    </div>
-    <div fxFlex="10" class="register" *ngIf="showLogout">
-        <span><a [routerLink]="['/login']">Logout</a></span>
-    </div>
+    <div class="flex-container" fxLayout="row" fxLayout.xs="column" style="height:20%;">
+        <div fxFlex="80" class="bank-name">
+            <p>Aapka Apna Bank</p>
+        </div>
+        <div fxFlex="20" class="register" *ngIf="showRegister">
+            <span><a [routerLink]="['/register']">Register Yourself</a></span>
+        </div>
+        <div fxFlex="20" class="register" *ngIf="showLogin">
+            <span><a [routerLink]="['/login']">Login</a></span>
+        </div>
+        <div fxFlex="10" class="register" *ngIf="showLogout">
+            <span>Welcome <b>{{userDetails.firstName}}</b></span>
+        </div>
+        <div fxFlex="10" class="register" *ngIf="showLogout">
+            <span><a [routerLink]="['/login']" (click)="logout()">Logout</a></span>
+        </div>
 
-</div>
+    </div>
 </div>

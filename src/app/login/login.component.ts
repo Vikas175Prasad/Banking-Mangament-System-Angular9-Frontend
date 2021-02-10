@@ -17,20 +17,19 @@ export class LoginComponent implements OnInit {
   }
 
 
-  email = '';
+  customerId = '';
   hide = true;
   password = '';
 
 
-  login(){
+  login(data){
       let loginDetails = {};
-      loginDetails["email"] = this.email;
-      loginDetails["password"] = this.password;
-      console.log(loginDetails);
+      loginDetails["customerId"] = data.customerId;
+      loginDetails["password"] = data.password;
       this.userService.login(loginDetails).subscribe(data=>{
-             console.log(data);
              if(data.length !== 0){
-               window.localStorage.setItem("userDetails",JSON.stringify(data));
+               this.userService.currentUser = data;
+              //  window.localStorage.setItem("userDetails",JSON.stringify(data));
                this.router.navigate(['dashboard']);
              }else{
               Swal.fire({
